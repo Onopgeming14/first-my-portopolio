@@ -1,4 +1,4 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
 
 /* variabel css */
 :root {
@@ -14,9 +14,49 @@
     --text-color: #44403C;   
 }
 
+/* dark mode */
+body.dark-theme {
+    --first-color: #EC4899;
+    --white-color: #0F172A;
+    --dark-color: #E5E7EB;
+    --text-color: #CBD5E1;
+}
+
+.nav-darkmode {
+    font-size: 1.4rem;
+    color: var(--white-color);
+    cursor: pointer;
+
+}
+
+body.dark-theme {
+    background-color: #020617;
+}
+
+body.dark-theme .section,
+body.dark-theme .reward {
+    background-color: #020617;
+}
+
+body.dark-theme .footer {
+      background: #0A0F1F;
+       border-top: 1px solid rgba(236, 72, 153, .25);
+}
+
+body.dark-theme .footer-title {
+    color: #6B7280;   
+    font-weight: 600;
+}
+
+body.dark-theme .reward-link-name {
+    color: #0A0F1F;
+    font-family: 'Popins' sans-serif;
+}
+
+
 /* font fotografi */
 :root {
-    --body-font: 'Montserrat', sans-serif;
+    --body-font: 'Poppins', sans-serif;
     --big-font-size: 6.25rem;
     --h2-font-size:1.25rem;
     --normal-font-size: .938rem;
@@ -132,9 +172,17 @@ img {
 .nav {
     height: var(--header-height);
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    
 }
+
+.nav-icons {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* 🔥 dorong ke kanan */
+    gap: 0.8rem;
+}
+
 
 @media screen and (max-width: 768px) {
     .nav-menu {
@@ -152,6 +200,8 @@ img {
 
 .nav-item {
     margin-bottom: var(--mb-4);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
 }
 
 .nav-link {
@@ -165,6 +215,8 @@ img {
 
 .nav-logo {
     color: var(--white-color);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 1000;
 }
 
 .nav-toggle {
@@ -206,6 +258,7 @@ img {
     font-size: var(--big-font-size);
     color: var(--white-color);
     line-height: .8;
+    font-family: 'Monsterrat', sans-serif;
 }
 
 .home-title span {
@@ -279,7 +332,7 @@ img {
 
 /* skills */
 .skills {
-    padding-bottom: 6rem;
+    padding-bottom: 10rem;
 }
 
 .skills-container {
@@ -451,8 +504,13 @@ img {
         height: calc(var(--header-height) + 1rem);
     }
 
+     .nav-menu {
+        margin-left: auto;
+    }
+
     .nav-list {
         display: flex;
+        align-items: center;
     }
 
     .nav-item {
@@ -536,3 +594,4 @@ img {
         margin-left: auto;
     }
 }
+
