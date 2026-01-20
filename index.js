@@ -57,25 +57,25 @@ sr.reveal('.home-scroll', {delay: 100})
 sr.reveal('.home-img', {origin:'right', delay: 300})
 
 //scroll about
-sr.reveal('.about-img', {delay: 400})
-sr.reveal('.about-subtitle', {delay: 200})
-sr.reveal('.about-profession', {delay: 300})
-sr.reveal('.about-text', {delay: 400})
-sr.reveal('.about-social-icon', {delay: 600, interval: 100})
+sr.reveal('.about-img', {delay: 300})
+sr.reveal('.about-subtitle', {delay: 100})
+sr.reveal('.about-profession', {delay: 200})
+sr.reveal('.about-text', {delay: 200})
+sr.reveal('.about-social-icon', {delay: 400, interval: 50})
 
 // scroll skills
 sr.reveal('.skills-subtitle', {})
-sr.reveal('.skills-name', {distance: '20px', delay: 50, interval: 50})
-sr.reveal('.skills-img', {delay: 300})
+sr.reveal('.skills-name', {distance: '20px', delay: 25, interval: 25})
+sr.reveal('.skills-img', {delay: 200})
 
 // scroll reward
-sr.reveal('.reward-img', {interval: 100})
+sr.reveal('.reward-img', {interval: 50})
 
 // scroll contact
 sr.reveal('.contact-subtitle', {})
-sr.reveal('.contact-text', {interval: 100})
-sr.reveal('.contact-input', {delay: 300})
-sr.reveal('.contact-button', {delay: 500})
+sr.reveal('.contact-text', {interval: 50})
+sr.reveal('.contact-input', {delay: 200})
+sr.reveal('.contact-button', {delay: 400})
 
 // dark mode
 const themeButton = document.getElementById('theme-button')
