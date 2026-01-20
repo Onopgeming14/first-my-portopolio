@@ -53,26 +53,56 @@ const sr = ScrollReveal ({
 
 // scrol home 
 sr.reveal('.home-title', {})
-sr.reveal('.home-scroll', {delay: 200})
-sr.reveal('.home-img', {origin:'right', delay: 400})
+sr.reveal('.home-scroll', {delay: 100})
+sr.reveal('.home-img', {origin:'right', delay: 300})
 
 //scroll about
-sr.reveal('.about-img', {delay: 500})
-sr.reveal('.about-subtitle', {delay: 300})
-sr.reveal('.about-profession', {delay: 400})
-sr.reveal('.about-text', {delay: 500})
-sr.reveal('.about-social-icon', {delay: 600, interval: 200})
+sr.reveal('.about-img', {delay: 400})
+sr.reveal('.about-subtitle', {delay: 200})
+sr.reveal('.about-profession', {delay: 300})
+sr.reveal('.about-text', {delay: 400})
+sr.reveal('.about-social-icon', {delay: 600, interval: 100})
 
 // scroll skills
 sr.reveal('.skills-subtitle', {})
-sr.reveal('.skills-name', {distance: '20px', delay: 50, interval: 100})
-sr.reveal('.skills-img', {delay: 400})
+sr.reveal('.skills-name', {distance: '20px', delay: 50, interval: 50})
+sr.reveal('.skills-img', {delay: 300})
 
 // scroll reward
-sr.reveal('.reward-img', {interval: 200})
+sr.reveal('.reward-img', {interval: 100})
 
 // scroll contact
 sr.reveal('.contact-subtitle', {})
-sr.reveal('.contact-text', {interval: 200})
-sr.reveal('.contact-input', {delay: 400})
-sr.reveal('.contact-button', {delay: 600})
+sr.reveal('.contact-text', {interval: 100})
+sr.reveal('.contact-input', {delay: 300})
+sr.reveal('.contact-button', {delay: 500})
+
+// dark mode
+const themeButton = document.getElementById('theme-button')
+const darkTheme = 'dark-theme'
+const iconTheme = 'bx-sun'
+
+// cek tema tersimpan
+const selectedTheme = localStorage.getItem('selected-theme')
+const selectedIcon = localStorage.getItem('selected-icon')
+
+if (selectedTheme) {
+  document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme)
+  themeButton.firstElementChild.classList[selectedIcon === 'bx-sun' ? 'add' : 'remove'](iconTheme)
+}
+
+// toggle theme
+themeButton.addEventListener('click', () => {
+    document.body.classList.toggle(darkTheme)
+    themeButton.firstElementChild.classList.toggle(iconTheme)
+
+    localStorage.setItem(
+        'selected-theme',
+        document.body.classList.contains(darkTheme) ? 'dark' : 'light'
+    )
+    localStorage.setItem(
+        'selected-icon',
+        themeButton.firstElementChild.classList.contains(iconTheme) ? 'bx-sun' : 'bx-moon'
+    )
+})
+
