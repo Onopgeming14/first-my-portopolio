@@ -26,7 +26,7 @@ body.dark-theme {
     font-size: 1.4rem;
     color: var(--white-color);
     cursor: pointer;
-
+    margin-left: 0rem;
 }
 
 body.dark-theme {
@@ -40,7 +40,7 @@ body.dark-theme .reward {
 
 body.dark-theme .footer {
       background: #0A0F1F;
-       border-top: 1px solid rgba(236, 72, 153, .25);
+
 }
 
 body.dark-theme .footer-title {
@@ -179,7 +179,7 @@ img {
 .nav-icons {
     display: flex;
     align-items: center;
-    margin-left: auto; /* 🔥 dorong ke kanan */
+    margin-left: auto;
     gap: 0.8rem;
 }
 
@@ -506,6 +506,10 @@ img {
 
      .nav-menu {
         margin-left: auto;
+    }
+
+    .nav-icons {
+        margin-left: 0rem;
     }
 
     .nav-list {
